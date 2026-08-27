@@ -2,7 +2,7 @@
   --bg:#dce8eb;
   --bg2:#c9dce1;
   --text:#26373d;
-  --muted:#60747b;
+  --muted:#40565d;
   --gold:#a97832;
   --line:rgba(38,55,61,.18);
 }
@@ -69,7 +69,7 @@ h1{
   margin:42px auto 0;
   text-align:center;
   font-size:1.15rem;
-  color:#40565d;
+  color:#344c54;
 }
 
 .quote{
@@ -147,7 +147,7 @@ section h2{
   max-width:760px;
   margin:0 auto;
   text-align:center;
-  color:var(--muted);
+  color:#40565d;
 }
 
 .listen{
