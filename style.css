@@ -1,97 +1,265 @@
 :root{
-  --bg:#244b59;
-  --bg2:#326a7b;
-  --text:#f6f1e8;
-  --muted:#b9b8b2;
-  --gold:#c49a5a;
-  --line:rgba(255,255,255,.13);
+  --bg:#dce8eb;
+  --bg2:#c9dce1;
+  --text:#26373d;
+  --muted:#60747b;
+  --gold:#a97832;
+  --line:rgba(38,55,61,.18);
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
- background:linear-gradient(160deg,var(--bg),var(--bg2) 55%,#1b3944;
   font-family:Arial,Helvetica,sans-serif;
-  
+  background:linear-gradient(160deg,var(--bg),var(--bg2));
   color:var(--text);
   line-height:1.6;
 }
-.wrap{width:min(1080px,92%);margin:auto}
-.hero{padding:34px 0 70px}
-.cover{
-  display:block;width:min(620px,100%);margin:0 auto 38px;
-  border-radius:4px;box-shadow:0 25px 70px rgba(0,0,0,.45);
-}
-.eyebrow{
-  text-align:center;color:var(--gold);letter-spacing:.32em;
-  font-size:.82rem;text-transform:uppercase;margin-bottom:12px;
-}
-h1{
-  text-align:center;font-size:clamp(2.2rem,6vw,5rem);
-  letter-spacing:.08em;margin:0 0 10px;text-transform:uppercase;
-}
-.subtitle{text-align:center;color:var(--muted);font-size:1.15rem}
-.intro{
-  max-width:760px;margin:42px auto 0;text-align:center;
-  font-size:1.15rem;color:#ddd9d0;
-}
-.quote{
-  max-width:700px;margin:36px auto;padding:26px 28px;
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  text-align:center;font-size:1.3rem;font-style:italic;
-}
-section{padding:65px 0;border-top:1px solid var(--line)}
-h2{text-align:center;font-size:2rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 34px}
-.tracklist{max-width:820px;margin:auto}
-.track{
-  display:flex;gap:18px;align-items:center;padding:16px 4px;
-  border-bottom:1px solid var(--line)
-}
-.num{width:38px;color:var(--gold);font-weight:bold}
-.title{flex:1;font-size:1.05rem}
-.status{font-size:.78rem;color:#9eaa9f}
-.note{
-  max-width:760px;margin:0 auto;text-align:center;color:var(--muted)
-}
-.listen{
-  display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:28px
-}
-.btn{
-  display:inline-block;padding:13px 22px;border:1px solid var(--gold);
-  border-radius:999px;color:var(--text);text-decoration:none;
-}
-.btn.primary{background:var(--gold);color:#111;border-color:var(--gold);font-weight:bold}
-footer{padding:42px 0 55px;text-align:center;color:#8f948f;font-size:.88rem}
-.small{font-size:.82rem;color:#777e7a}
-@media(max-width:600px){
-  .hero{padding-top:20px}
-  .track{gap:10px}
-  .status{display:none}
-  .intro{font-size:1.02rem}
-}
-section:nth-of-type(odd){
-  background:rgba(255,255,255,.035);
+
+.wrap{
+  width:min(1080px,92%);
+  margin:auto;
 }
 
-section:nth-of-type(even){
-  background:rgba(255,255,255,.015);
+.hero{
+  padding:34px 0 70px;
+}
+
+.cover{
+  display:block;
+  width:min(620px,100%);
+  margin:0 auto 38px;
+  border-radius:6px;
+  box-shadow:0 18px 45px rgba(35,55,60,.22);
+}
+
+.eyebrow{
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:.32em;
+  font-size:.82rem;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+
+h1{
+  text-align:center;
+  font-size:clamp(2.2rem,6vw,5rem);
+  letter-spacing:.08em;
+  margin:0 0 10px;
+  text-transform:uppercase;
+  color:#23353b;
+}
+
+.subtitle{
+  text-align:center;
+  color:var(--muted);
+  font-size:1.15rem;
+}
+
+.intro{
+  max-width:760px;
+  margin:42px auto 0;
+  text-align:center;
+  font-size:1.15rem;
+  color:#40565d;
+}
+
+.quote{
+  max-width:700px;
+  margin:36px auto;
+  padding:26px 28px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.28);
+  text-align:center;
+  font-size:1.3rem;
+  font-style:italic;
+  color:#334950;
+  border-radius:4px;
 }
 
 section{
-  border-top:1px solid rgba(255,255,255,.10);
+  padding:65px 0;
+  border-top:1px solid var(--line);
 }
 
-.intro{
-  color:#e8edf0;
+section h2{
+  text-align:center;
+  font-size:2rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin:0 0 34px;
+  color:#26383e;
 }
 
-.quote{
-  background:rgba(255,255,255,.025);
-  border-color:rgba(255,255,255,.16);
+.tracklist{
+  max-width:820px;
+  margin:auto;
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(35,55,60,.08);
 }
 
 .track{
-  background:rgba(255,255,255,.025);
-  border-bottom:1px solid rgba(255,255,255,.12);
+  display:flex;
+  gap:18px;
+  align-items:center;
+  padding:16px 8px;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.25);
+  transition:background .2s ease;
+}
+
+.track:nth-child(even){
+  background:rgba(255,255,255,.12);
+}
+
+.track:hover{
+  background:rgba(255,255,255,.42);
+}
+
+.num{
+  width:38px;
+  color:var(--gold);
+  font-weight:bold;
+}
+
+.title{
+  flex:1;
+  font-size:1.05rem;
+  color:#263a41;
+}
+
+.status{
+  font-size:.78rem;
+  color:#6d8087;
+}
+
+.note{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+  color:var(--muted);
+}
+
+.listen{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border:1px solid var(--gold);
+  border-radius:999px;
+  color:#394b51;
+  text-decoration:none;
+  background:rgba(255,255,255,.3);
+  transition:all .2s ease;
+}
+
+.btn:hover{
+  background:rgba(255,255,255,.65);
+}
+
+.btn.primary{
+  background:var(--gold);
+  color:white;
+  border-color:var(--gold);
+  font-weight:bold;
+}
+
+footer{
+  padding:42px 0 55px;
+  text-align:center;
+  color:#65777d;
+  font-size:.88rem;
+}
+
+.small{
+  font-size:.82rem;
+  color:#71848a;
+}
+
+.audio-track{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  width:100%;
+  padding:16px 4px;
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.22);
+}
+
+.audio-track strong{
+  flex:1;
+  color:#263a41;
+}
+
+audio{
+  max-width:100%;
+}
+
+section:nth-of-type(odd){
+  background:rgba(255,255,255,.08);
+}
+
+section:nth-of-type(even){
+  background:rgba(255,255,255,.18);
+}
+
+section + section{
+  border-top:1px solid var(--line);
+}
+
+.intro em,
+.subtitle em{
+  color:#50666d;
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding-top:20px;
+  }
+
+  .cover{
+    margin-bottom:28px;
+  }
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  .track{
+    gap:10px;
+  }
+
+  .status{
+    display:none;
+  }
+
+  .intro{
+    font-size:1.02rem;
+  }
+
+  .audio-track{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  audio{
+    width:100%;
+  }
 }
