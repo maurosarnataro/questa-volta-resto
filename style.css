@@ -69,3 +69,28 @@ footer{padding:42px 0 55px;text-align:center;color:#8f948f;font-size:.88rem}
   .status{display:none}
   .intro{font-size:1.02rem}
 }
+section:nth-of-type(odd){
+  background:rgba(255,255,255,.035);
+}
+
+section:nth-of-type(even){
+  background:rgba(255,255,255,.015);
+}
+
+section{
+  border-top:1px solid rgba(255,255,255,.10);
+}
+
+.intro{
+  color:#e8edf0;
+}
+
+.quote{
+  background:rgba(255,255,255,.025);
+  border-color:rgba(255,255,255,.16);
+}
+
+.track{
+  background:rgba(255,255,255,.025);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
