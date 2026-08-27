@@ -1,17 +1,17 @@
-
 :root{
- --bg:#183844;
---bg2:#245363;
---text:#f6f1e8;
+  --bg:#244b59;
+  --bg2:#326a7b;
+  --text:#f6f1e8;
   --muted:#b9b8b2;
   --gold:#c49a5a;
   --line:rgba(255,255,255,.13);
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
- background:linear-gradient(160deg,var(--bg),var(--bg2) 55%,#16313b);
+ background:linear-gradient(160deg,var(--bg),var(--bg2) 55%,#1b3944;
   font-family:Arial,Helvetica,sans-serif;
   
   color:var(--text);
