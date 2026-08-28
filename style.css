@@ -592,3 +592,65 @@ audio:focus-visible {
     transition: none !important;
   }
 }
+/* =====================================================
+   NUOVO STILE — QUESTA VOLTA RESTO
+   ===================================================== */
+
+/* Verde smeraldo più luminoso per l'HERO */
+.hero {
+  background:
+    radial-gradient(
+      circle at center top,
+      rgba(255, 255, 255, 0.22),
+      transparent 48%
+    ),
+    linear-gradient(
+      135deg,
+      #129b78 0%,
+      #19a982 52%,
+      #5cc4a7 100%
+    );
+
+  color: #ffffff;
+}
+
+/* Immagine del tunnel */
+.tunnel-image {
+  display: block;
+  width: min(520px, 82vw);
+  height: auto;
+  margin: 0 auto 48px;
+  border-radius: 6px;
+
+  box-shadow:
+    0 25px 60px rgba(0, 50, 40, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+/* Testi dell'HERO */
+.hero .eyebrow {
+  color: #ffffff;
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.hero .subtitle {
+  color: #ffffff;
+}
+
+.hero .intro {
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.hero .quote {
+  color: #ffffff;
+}
+
+/* Manteniamo il verde come colore principale */
+:root {
+  --green-main: #129b78;
+  --green-dark: #08705a;
+  --accent: #129b78;
+}
