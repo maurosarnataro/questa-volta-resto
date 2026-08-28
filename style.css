@@ -3,18 +3,18 @@
   --bg2:#ddd5c8;
   --paper:#f1ede5;
 
-  --text:#292b2b;
-  --muted:#5c5a56;
-  --soft:#77716a;
+  --text:#454542;
+  --muted:#66645f;
+  --soft:#858078;
 
-  --wine:#633b3d;
-  --wine-dark:#45292b;
+  --wine:#66575a;
+  --wine-dark:#3f4545;
 
   --gold:#ad7b35;
   --gold-light:#c49a5c;
 
-  --line:rgba(48,43,39,.16);
-  --shadow:rgba(45,38,32,.12);
+  --line:rgba(70,65,60,.14);
+  --shadow:rgba(45,38,32,.10);
 }
 
 *{
@@ -28,19 +28,14 @@ html{
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:
-    linear-gradient(
-      160deg,
-      var(--bg),
-      var(--bg2)
-    );
+  background:linear-gradient(
+    160deg,
+    var(--bg),
+    var(--bg2)
+  );
   color:var(--text);
   line-height:1.7;
 }
-
-/* =========================
-   STRUTTURA
-   ========================= */
 
 .wrap{
   width:min(1080px,92%);
@@ -79,7 +74,7 @@ h1{
   letter-spacing:.08em;
   margin:0 0 12px;
   text-transform:uppercase;
-  color:var(--wine-dark);
+  color:#3f4545;
   font-weight:700;
 }
 
@@ -94,30 +89,30 @@ h1{
   margin:44px auto 0;
   text-align:center;
   font-size:1.15rem;
-  color:#4d4a46;
+  color:#555650;
 }
 
 .intro em,
 .subtitle em{
-  color:var(--wine);
+  color:#66575a;
 }
 
 .quote{
   max-width:700px;
   margin:38px auto;
   padding:28px 30px;
-  border-top:1px solid rgba(99,59,61,.28);
-  border-bottom:1px solid rgba(99,59,61,.28);
+  border-top:1px solid rgba(70,65,60,.18);
+  border-bottom:1px solid rgba(70,65,60,.18);
   background:rgba(255,250,242,.42);
   text-align:center;
   font-size:1.3rem;
   font-style:italic;
-  color:#4b3939;
+  color:#57544f;
   border-radius:4px;
 }
 
 .quote strong{
-  color:var(--wine-dark);
+  color:#3f4545;
 }
 
 /* =========================
@@ -135,7 +130,7 @@ section h2{
   letter-spacing:.09em;
   text-transform:uppercase;
   margin:0 0 36px;
-  color:var(--wine-dark);
+  color:#4b5050;
 }
 
 section:nth-of-type(odd){
@@ -191,7 +186,7 @@ section + section{
 .title{
   flex:1;
   font-size:1.05rem;
-  color:#373534;
+  color:#50504c;
 }
 
 .status{
@@ -207,7 +202,7 @@ section + section{
   max-width:760px;
   margin:0 auto;
   text-align:center;
-  color:#5c5954;
+  color:#66635e;
 }
 
 .listen{
@@ -230,12 +225,12 @@ section + section{
 
 .audio-track strong{
   flex:1;
-  color:#393534;
+  color:#50504c;
 }
 
 audio{
   max-width:100%;
-  accent-color:var(--wine);
+  accent-color:var(--gold);
 }
 
 /* =========================
@@ -247,7 +242,7 @@ audio{
   padding:13px 23px;
   border:1px solid var(--gold);
   border-radius:999px;
-  color:#51463b;
+  color:#595047;
   text-decoration:none;
   background:rgba(255,250,242,.42);
   transition:
@@ -288,7 +283,7 @@ audio{
 .book-section h2{
   font-size:clamp(2.2rem,5vw,4rem);
   margin-bottom:12px;
-  color:var(--wine-dark);
+  color:#3f4545;
 }
 
 .book-subtitle{
@@ -303,7 +298,7 @@ audio{
   margin:0 auto 68px;
   text-align:center;
   font-size:1.22rem;
-  color:#4d4a46;
+  color:#555650;
 }
 
 .book-block{
@@ -318,14 +313,14 @@ audio{
   font-size:1.55rem;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:var(--wine-dark);
+  color:#4b5050;
   margin:0 0 29px;
 }
 
 .book-block p{
   max-width:760px;
   margin:0 auto 21px;
-  color:#55514c;
+  color:#5b5954;
   font-size:1.05rem;
 }
 
@@ -333,14 +328,14 @@ audio{
   max-width:700px;
   margin:40px auto 0;
   padding:29px 30px;
-  border-top:1px solid rgba(99,59,61,.25);
-  border-bottom:1px solid rgba(99,59,61,.25);
+  border-top:1px solid rgba(70,65,60,.18);
+  border-bottom:1px solid rgba(70,65,60,.18);
   background:rgba(255,250,242,.48);
   border-radius:4px;
   text-align:center;
   font-size:1.35rem;
   font-style:italic;
-  color:#4b3939;
+  color:#57544f;
 }
 
 /* =========================
@@ -364,7 +359,7 @@ audio{
   text-align:center;
 
   background:rgba(255,250,242,.45);
-  border:1px solid rgba(48,43,39,.15);
+  border:1px solid rgba(70,65,60,.14);
   border-radius:5px;
 
   box-shadow:
@@ -388,12 +383,12 @@ audio{
   font-size:1.2rem;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:var(--wine-dark);
+  color:#4b5050;
 }
 
 .book-card p{
   margin:0;
-  color:#5a5651;
+  color:#62605b;
   font-size:.98rem;
 }
 
@@ -412,8 +407,8 @@ audio{
 
   text-align:center;
 
-  border-top:1px solid rgba(99,59,61,.22);
-  border-bottom:1px solid rgba(99,59,61,.22);
+  border-top:1px solid rgba(70,65,60,.18);
+  border-bottom:1px solid rgba(70,65,60,.18);
 
   background:rgba(255,250,242,.38);
   border-radius:5px;
@@ -423,7 +418,7 @@ audio{
 }
 
 .book-music p{
-  color:#57534e;
+  color:#5e5b56;
   font-size:1.05rem;
 }
 
@@ -432,7 +427,7 @@ audio{
   font-size:1.5rem;
   text-transform:uppercase;
   letter-spacing:.09em;
-  color:var(--wine-dark);
+  color:#4b5050;
   font-weight:bold;
 }
 
@@ -467,7 +462,7 @@ audio{
 }
 
 .book-buy p{
-  color:#5a5651;
+  color:#62605b;
   margin:0 0 25px;
 }
 
@@ -482,14 +477,14 @@ audio{
 footer{
   padding:45px 0 58px;
   text-align:center;
-  color:#706960;
+  color:#777169;
   font-size:.88rem;
-  background:rgba(74,48,45,.055);
+  background:rgba(74,48,45,.035);
 }
 
 .small{
   font-size:.82rem;
-  color:#817970;
+  color:#878078;
 }
 
 /* =========================
@@ -584,5 +579,4 @@ footer{
   .book-music{
     padding:33px 18px;
   }
-
 }
