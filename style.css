@@ -1,10 +1,20 @@
 :root{
-  --bg:#dce8eb;
-  --bg2:#c9dce1;
-  --text:#26373d;
-  --muted:#40565d;
-  --gold:#a97832;
-  --line:rgba(38,55,61,.18);
+  --bg:#e9e3d8;
+  --bg2:#ddd5c8;
+  --paper:#f1ede5;
+
+  --text:#292b2b;
+  --muted:#5c5a56;
+  --soft:#77716a;
+
+  --wine:#633b3d;
+  --wine-dark:#45292b;
+
+  --gold:#ad7b35;
+  --gold-light:#c49a5c;
+
+  --line:rgba(48,43,39,.16);
+  --shadow:rgba(45,38,32,.12);
 }
 
 *{
@@ -18,44 +28,59 @@ html{
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:linear-gradient(160deg,var(--bg),var(--bg2));
+  background:
+    linear-gradient(
+      160deg,
+      var(--bg),
+      var(--bg2)
+    );
   color:var(--text);
-  line-height:1.6;
+  line-height:1.7;
 }
+
+/* =========================
+   STRUTTURA
+   ========================= */
 
 .wrap{
   width:min(1080px,92%);
   margin:auto;
 }
 
+/* =========================
+   HERO
+   ========================= */
+
 .hero{
-  padding:34px 0 70px;
+  padding:38px 0 78px;
 }
 
 .cover{
   display:block;
   width:min(620px,100%);
-  margin:0 auto 38px;
-  border-radius:6px;
-  box-shadow:0 18px 45px rgba(35,55,60,.22);
+  margin:0 auto 40px;
+  border-radius:5px;
+  box-shadow:
+    0 22px 55px var(--shadow);
 }
 
 .eyebrow{
   text-align:center;
   color:var(--gold);
-  letter-spacing:.32em;
+  letter-spacing:.34em;
   font-size:.82rem;
   text-transform:uppercase;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 h1{
   text-align:center;
   font-size:clamp(2.2rem,6vw,5rem);
   letter-spacing:.08em;
-  margin:0 0 10px;
+  margin:0 0 12px;
   text-transform:uppercase;
-  color:#23353b;
+  color:var(--wine-dark);
+  font-weight:700;
 }
 
 .subtitle{
@@ -66,64 +91,95 @@ h1{
 
 .intro{
   max-width:760px;
-  margin:42px auto 0;
+  margin:44px auto 0;
   text-align:center;
   font-size:1.15rem;
-  color:#344c54;
+  color:#4d4a46;
+}
+
+.intro em,
+.subtitle em{
+  color:var(--wine);
 }
 
 .quote{
   max-width:700px;
-  margin:36px auto;
-  padding:26px 28px;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.28);
+  margin:38px auto;
+  padding:28px 30px;
+  border-top:1px solid rgba(99,59,61,.28);
+  border-bottom:1px solid rgba(99,59,61,.28);
+  background:rgba(255,250,242,.42);
   text-align:center;
   font-size:1.3rem;
   font-style:italic;
-  color:#334950;
+  color:#4b3939;
   border-radius:4px;
 }
 
+.quote strong{
+  color:var(--wine-dark);
+}
+
+/* =========================
+   SEZIONI
+   ========================= */
+
 section{
-  padding:65px 0;
+  padding:70px 0;
   border-top:1px solid var(--line);
 }
 
 section h2{
   text-align:center;
   font-size:2rem;
-  letter-spacing:.08em;
+  letter-spacing:.09em;
   text-transform:uppercase;
-  margin:0 0 34px;
-  color:#26383e;
+  margin:0 0 36px;
+  color:var(--wine-dark);
 }
+
+section:nth-of-type(odd){
+  background:rgba(255,250,242,.16);
+}
+
+section:nth-of-type(even){
+  background:rgba(116,91,70,.045);
+}
+
+section + section{
+  border-top:1px solid var(--line);
+}
+
+/* =========================
+   TRACKLIST
+   ========================= */
 
 .tracklist{
   max-width:820px;
   margin:auto;
-  border-radius:4px;
+  border-radius:5px;
   overflow:hidden;
-  box-shadow:0 8px 25px rgba(35,55,60,.08);
+  box-shadow:0 10px 30px rgba(45,38,32,.08);
 }
 
 .track{
   display:flex;
   gap:18px;
   align-items:center;
-  padding:16px 8px;
+  padding:17px 12px;
   border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.25);
-  transition:background .2s ease;
+  background:rgba(255,250,242,.45);
+  transition:
+    background .2s ease,
+    transform .2s ease;
 }
 
 .track:nth-child(even){
-  background:rgba(255,255,255,.12);
+  background:rgba(255,255,255,.20);
 }
 
 .track:hover{
-  background:rgba(255,255,255,.42);
+  background:rgba(255,250,242,.70);
 }
 
 .num{
@@ -135,107 +191,94 @@ section h2{
 .title{
   flex:1;
   font-size:1.05rem;
-  color:#263a41;
+  color:#373534;
 }
 
 .status{
   font-size:.78rem;
-  color:#6d8087;
+  color:#7b746c;
 }
+
+/* =========================
+   ASCOLTA
+   ========================= */
 
 .note{
   max-width:760px;
   margin:0 auto;
   text-align:center;
-  color:#40565d;
+  color:#5c5954;
 }
 
 .listen{
   display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-  margin-top:28px;
-}
-
-.btn{
-  display:inline-block;
-  padding:13px 22px;
-  border:1px solid var(--gold);
-  border-radius:999px;
-  color:#394b51;
-  text-decoration:none;
-  background:rgba(255,255,255,.3);
-  transition:all .2s ease;
-}
-
-.btn:hover{
-  background:rgba(255,255,255,.65);
-}
-
-.btn.primary{
-  background:var(--gold);
-  color:white;
-  border-color:var(--gold);
-  font-weight:bold;
-}
-
-footer{
-  padding:42px 0 55px;
-  text-align:center;
-  color:#65777d;
-  font-size:.88rem;
-}
-
-.small{
-  font-size:.82rem;
-  color:#71848a;
+  flex-direction:column;
+  gap:0;
+  max-width:820px;
+  margin:30px auto 0;
 }
 
 .audio-track{
   display:flex;
   align-items:center;
-  gap:18px;
+  gap:22px;
   width:100%;
-  padding:16px 4px;
+  padding:17px 10px;
   border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.22);
+  background:rgba(255,250,242,.32);
 }
 
 .audio-track strong{
   flex:1;
-  color:#263a41;
+  color:#393534;
 }
 
 audio{
   max-width:100%;
+  accent-color:var(--wine);
 }
-
-section:nth-of-type(odd){
-  background:rgba(255,255,255,.08);
-}
-
-section:nth-of-type(even){
-  background:rgba(255,255,255,.18);
-}
-
-section + section{
-  border-top:1px solid var(--line);
-}
-
-.intro em,
-.subtitle em{
-  color:#50666d;
-}
-
 
 /* =========================
-   IL LIBRO
+   PULSANTI
+   ========================= */
+
+.btn{
+  display:inline-block;
+  padding:13px 23px;
+  border:1px solid var(--gold);
+  border-radius:999px;
+  color:#51463b;
+  text-decoration:none;
+  background:rgba(255,250,242,.42);
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.btn:hover{
+  background:rgba(255,250,242,.82);
+  transform:translateY(-1px);
+}
+
+.btn.primary{
+  background:var(--gold);
+  color:#fffaf2;
+  border-color:var(--gold);
+  font-weight:bold;
+}
+
+.btn.primary:hover{
+  background:#96682b;
+}
+
+/* =========================
+   LIBRO
    ========================= */
 
 .book-section{
-  padding-top:85px;
-  padding-bottom:90px;
+  padding-top:88px;
+  padding-bottom:95px;
 }
 
 .book-section > .wrap{
@@ -245,26 +288,27 @@ section + section{
 .book-section h2{
   font-size:clamp(2.2rem,5vw,4rem);
   margin-bottom:12px;
+  color:var(--wine-dark);
 }
 
 .book-subtitle{
   text-align:center;
   color:var(--muted);
   font-size:1.2rem;
-  margin-bottom:35px;
+  margin-bottom:38px;
 }
 
 .book-intro{
   max-width:760px;
-  margin:0 auto 65px;
+  margin:0 auto 68px;
   text-align:center;
   font-size:1.22rem;
-  color:#344c54;
+  color:#4d4a46;
 }
 
 .book-block{
   max-width:850px;
-  margin:0 auto 70px;
+  margin:0 auto 72px;
 }
 
 .book-block h3,
@@ -272,33 +316,32 @@ section + section{
 .book-buy h3{
   text-align:center;
   font-size:1.55rem;
-  letter-spacing:.07em;
+  letter-spacing:.08em;
   text-transform:uppercase;
-  color:#26383e;
-  margin:0 0 28px;
+  color:var(--wine-dark);
+  margin:0 0 29px;
 }
 
 .book-block p{
   max-width:760px;
-  margin:0 auto 20px;
-  color:#40565d;
+  margin:0 auto 21px;
+  color:#55514c;
   font-size:1.05rem;
 }
 
 .book-quote{
   max-width:700px;
-  margin:38px auto 0;
-  padding:28px 30px;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.28);
+  margin:40px auto 0;
+  padding:29px 30px;
+  border-top:1px solid rgba(99,59,61,.25);
+  border-bottom:1px solid rgba(99,59,61,.25);
+  background:rgba(255,250,242,.48);
   border-radius:4px;
   text-align:center;
   font-size:1.35rem;
   font-style:italic;
-  color:#334950;
+  color:#4b3939;
 }
-
 
 /* =========================
    CARD DEL LIBRO
@@ -313,22 +356,31 @@ section + section{
 
 .book-card{
   min-height:250px;
-  padding:28px 24px;
+  padding:30px 25px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   align-items:center;
   text-align:center;
-  background:rgba(255,255,255,.25);
-  border:1px solid var(--line);
-  border-radius:4px;
-  box-shadow:0 8px 25px rgba(35,55,60,.06);
-  transition:background .2s ease, transform .2s ease;
+
+  background:rgba(255,250,242,.45);
+  border:1px solid rgba(48,43,39,.15);
+  border-radius:5px;
+
+  box-shadow:
+    0 9px 28px rgba(45,38,32,.07);
+
+  transition:
+    background .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
 }
 
 .book-card:hover{
-  background:rgba(255,255,255,.42);
-  transform:translateY(-2px);
+  background:rgba(255,250,242,.72);
+  transform:translateY(-3px);
+  box-shadow:
+    0 13px 32px rgba(45,38,32,.10);
 }
 
 .book-card h4{
@@ -336,12 +388,12 @@ section + section{
   font-size:1.2rem;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:#263a41;
+  color:var(--wine-dark);
 }
 
 .book-card p{
   margin:0;
-  color:#40565d;
+  color:#5a5651;
   font-size:.98rem;
 }
 
@@ -349,43 +401,47 @@ section + section{
   margin-top:25px;
 }
 
-
 /* =========================
    LIBRO → MUSICA
    ========================= */
 
 .book-music{
   max-width:760px;
-  margin:0 auto 75px;
-  padding:48px 30px;
+  margin:0 auto 78px;
+  padding:50px 32px;
+
   text-align:center;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background:rgba(255,255,255,.18);
-  border-radius:4px;
+
+  border-top:1px solid rgba(99,59,61,.22);
+  border-bottom:1px solid rgba(99,59,61,.22);
+
+  background:rgba(255,250,242,.38);
+  border-radius:5px;
+
+  box-shadow:
+    0 10px 30px rgba(45,38,32,.05);
 }
 
 .book-music p{
-  color:#40565d;
+  color:#57534e;
   font-size:1.05rem;
 }
 
 .book-music-title{
-  margin:25px 0 5px;
+  margin:27px 0 6px;
   font-size:1.5rem;
   text-transform:uppercase;
-  letter-spacing:.08em;
-  color:#26383e;
+  letter-spacing:.09em;
+  color:var(--wine-dark);
   font-weight:bold;
 }
 
 .book-music .btn{
-  margin-top:15px;
+  margin-top:16px;
 }
 
-
 /* =========================
-   ANCORA FUTURA ESTRATTI
+   ESTRATTI
    ========================= */
 
 .future-anchor{
@@ -395,7 +451,6 @@ section + section{
   padding:0;
   visibility:hidden;
 }
-
 
 /* =========================
    ACQUISTA IL LIBRO
@@ -412,7 +467,7 @@ section + section{
 }
 
 .book-buy p{
-  color:#40565d;
+  color:#5a5651;
   margin:0 0 25px;
 }
 
@@ -420,6 +475,22 @@ section + section{
   margin-top:5px;
 }
 
+/* =========================
+   FOOTER
+   ========================= */
+
+footer{
+  padding:45px 0 58px;
+  text-align:center;
+  color:#706960;
+  font-size:.88rem;
+  background:rgba(74,48,45,.055);
+}
+
+.small{
+  font-size:.82rem;
+  color:#817970;
+}
 
 /* =========================
    MOBILE
@@ -439,23 +510,22 @@ section + section{
   }
 
   .book-block{
-    margin-bottom:55px;
+    margin-bottom:56px;
   }
 
   .book-music{
     padding:38px 22px;
   }
-
 }
 
 @media(max-width:600px){
 
   .hero{
-    padding-top:20px;
+    padding-top:22px;
   }
 
   .cover{
-    margin-bottom:28px;
+    margin-bottom:30px;
   }
 
   h1{
@@ -477,6 +547,7 @@ section + section{
   .audio-track{
     flex-direction:column;
     align-items:stretch;
+    gap:12px;
   }
 
   audio{
@@ -484,8 +555,8 @@ section + section{
   }
 
   .book-section{
-    padding-top:65px;
-    padding-bottom:70px;
+    padding-top:68px;
+    padding-bottom:72px;
   }
 
   .book-section h2{
@@ -498,7 +569,7 @@ section + section{
 
   .book-intro{
     font-size:1.05rem;
-    margin-bottom:50px;
+    margin-bottom:52px;
   }
 
   .book-block p{
@@ -507,90 +578,11 @@ section + section{
 
   .book-quote{
     font-size:1.15rem;
-    padding:24px 20px;
+    padding:25px 20px;
   }
 
   .book-music{
-    padding:32px 18px;
-  }
-
-}
-/* =========================
-   ESTRATTI DEL LIBRO
-   ========================= */
-
-.book-extracts{
-  max-width:850px;
-  margin:20px auto 75px;
-}
-
-.book-extracts > h3{
-  text-align:center;
-  font-size:1.55rem;
-  letter-spacing:.07em;
-  text-transform:uppercase;
-  color:#26383e;
-  margin:0 0 35px;
-}
-
-.extract{
-  max-width:760px;
-  margin:0 auto 55px;
-  padding:42px 38px;
-  background:rgba(255,255,255,.22);
-  border:1px solid var(--line);
-  border-radius:4px;
-  box-shadow:0 8px 25px rgba(35,55,60,.06);
-  scroll-margin-top:30px;
-}
-
-.extract-label{
-  text-align:center;
-  color:var(--gold);
-  letter-spacing:.18em;
-  font-size:.76rem;
-  text-transform:uppercase;
-  margin-bottom:12px;
-}
-
-.extract h4{
-  text-align:center;
-  margin:0 0 30px;
-  font-size:1.55rem;
-  color:#26383e;
-  letter-spacing:.05em;
-}
-
-.extract p{
-  max-width:680px;
-  margin:0 auto 20px;
-  color:#40565d;
-  font-size:1.05rem;
-}
-
-.extract .book-quote{
-  margin-top:30px;
-  margin-bottom:30px;
-}
-
-.extract .btn{
-  display:block;
-  width:max-content;
-  margin:30px auto 0;
-}
-
-@media(max-width:600px){
-
-  .extract{
-    padding:32px 22px;
-  }
-
-  .extract h4{
-    font-size:1.3rem;
-  }
-
-  .extract p{
-    font-size:1rem;
+    padding:33px 18px;
   }
 
 }
