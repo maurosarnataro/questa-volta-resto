@@ -7,21 +7,21 @@
 /* ---------- ROOT ---------- */
 
 :root {
-  --bg: #eee8dc;
-  --bg-soft: #e8e0d3;
-  --bg-card: #f7f3eb;
+  --bg: #087F5B;
+  --bg-soft: #0A936B;
+  --bg-card: #0C8A64;
 
-  --text: #403936;
-  --text-soft: #625b56;
-  --muted: #817872;
+  --text: #ffffff;
+  --text-soft: #E4F7EF;
+  --muted: #B9E3D3;
 
-  --line: rgba(74, 61, 55, 0.16);
-  --line-strong: rgba(74, 61, 55, 0.28);
+  --line: rgba(255, 255, 255, 0.18);
+  --line-strong: rgba(255, 255, 255, 0.30);
 
-  --accent: #8a5a55;
-  --accent-soft: rgba(138, 90, 85, 0.10);
+  --accent: #ffffff;
+  --accent-soft: rgba(255, 255, 255, 0.10);
 
-  --gold: #b08a52;
+  --gold: #8FE3C2;
 
   --white: #ffffff;
 
@@ -108,7 +108,7 @@ p {
   background:
     radial-gradient(
       circle at center top,
-      rgba(176, 138, 82, 0.10),
+      rgba(143, 227, 194, 0.14),
       transparent 48%
     ),
     var(--bg);
@@ -134,8 +134,8 @@ p {
   border-radius: 3px;
 
   box-shadow:
-    0 30px 70px rgba(55, 43, 38, 0.22),
-    0 0 0 1px rgba(74, 61, 55, 0.12);
+    0 30px 70px rgba(0, 45, 32, 0.30),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 
@@ -208,7 +208,7 @@ p {
 
   border-left: 2px solid var(--gold);
 
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.10);
 
   color: var(--text);
 
@@ -267,7 +267,7 @@ p {
 }
 
 .track:hover {
-  background: rgba(138, 90, 85, 0.06);
+  background: rgba(255, 255, 255, 0.08);
 
   padding-left: 25px;
   padding-right: 25px;
@@ -299,7 +299,7 @@ p {
 /* ---------- STATUS ---------- */
 
 .track .status {
-  color: var(--accent);
+  color: var(--gold);
 
   font-size: 11px;
   font-weight: 600;
@@ -359,7 +359,7 @@ audio {
 .book-subtitle {
   margin: -25px auto 45px;
 
-  color: var(--accent);
+  color: var(--gold);
 
   font-size: 21px;
 
@@ -469,7 +469,7 @@ audio {
   border: 1px solid var(--line);
 
   box-shadow:
-    0 8px 25px rgba(60, 48, 42, 0.05);
+    0 8px 25px rgba(0, 45, 32, 0.10);
 
   transition:
     transform 0.25s ease,
@@ -482,12 +482,12 @@ audio {
 .book-card:hover {
   transform: translateY(-4px);
 
-  background: #fbf8f2;
+  background: #0E9F75;
 
-  border-color: rgba(138, 90, 85, 0.35);
+  border-color: rgba(255, 255, 255, 0.35);
 
   box-shadow:
-    0 14px 35px rgba(60, 48, 42, 0.09);
+    0 14px 35px rgba(0, 45, 32, 0.16);
 }
 
 
@@ -557,7 +557,7 @@ audio {
 
   border-color: var(--accent);
 
-  color: #ffffff;
+  color: #087F5B;
 }
 
 
@@ -570,7 +570,7 @@ audio {
 
   border-color: var(--accent);
 
-  color: #ffffff;
+  color: #087F5B;
 }
 
 .btn.primary:hover {
@@ -592,8 +592,8 @@ audio {
   background:
     linear-gradient(
       135deg,
-      rgba(138, 90, 85, 0.08),
-      rgba(176, 138, 82, 0.05)
+      rgba(255, 255, 255, 0.09),
+      rgba(143, 227, 194, 0.08)
     );
 
   border: 1px solid var(--line);
@@ -693,7 +693,7 @@ audio {
 footer {
   padding: 45px 0;
 
-  background: #ded5c7;
+  background: #056B4E;
 
   border-top: 1px solid var(--line);
 
