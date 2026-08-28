@@ -228,6 +228,226 @@ section + section{
   color:#50666d;
 }
 
+
+/* =========================
+   IL LIBRO
+   ========================= */
+
+.book-section{
+  padding-top:85px;
+  padding-bottom:90px;
+}
+
+.book-section > .wrap{
+  max-width:1080px;
+}
+
+.book-section h2{
+  font-size:clamp(2.2rem,5vw,4rem);
+  margin-bottom:12px;
+}
+
+.book-subtitle{
+  text-align:center;
+  color:var(--muted);
+  font-size:1.2rem;
+  margin-bottom:35px;
+}
+
+.book-intro{
+  max-width:760px;
+  margin:0 auto 65px;
+  text-align:center;
+  font-size:1.22rem;
+  color:#344c54;
+}
+
+.book-block{
+  max-width:850px;
+  margin:0 auto 70px;
+}
+
+.book-block h3,
+.book-music h3,
+.book-buy h3{
+  text-align:center;
+  font-size:1.55rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:#26383e;
+  margin:0 0 28px;
+}
+
+.book-block p{
+  max-width:760px;
+  margin:0 auto 20px;
+  color:#40565d;
+  font-size:1.05rem;
+}
+
+.book-quote{
+  max-width:700px;
+  margin:38px auto 0;
+  padding:28px 30px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.28);
+  border-radius:4px;
+  text-align:center;
+  font-size:1.35rem;
+  font-style:italic;
+  color:#334950;
+}
+
+
+/* =========================
+   CARD DEL LIBRO
+   ========================= */
+
+.book-cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:30px;
+}
+
+.book-card{
+  min-height:250px;
+  padding:28px 24px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  text-align:center;
+  background:rgba(255,255,255,.25);
+  border:1px solid var(--line);
+  border-radius:4px;
+  box-shadow:0 8px 25px rgba(35,55,60,.06);
+  transition:background .2s ease, transform .2s ease;
+}
+
+.book-card:hover{
+  background:rgba(255,255,255,.42);
+  transform:translateY(-2px);
+}
+
+.book-card h4{
+  margin:0 0 15px;
+  font-size:1.2rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#263a41;
+}
+
+.book-card p{
+  margin:0;
+  color:#40565d;
+  font-size:.98rem;
+}
+
+.book-card .btn{
+  margin-top:25px;
+}
+
+
+/* =========================
+   LIBRO → MUSICA
+   ========================= */
+
+.book-music{
+  max-width:760px;
+  margin:0 auto 75px;
+  padding:48px 30px;
+  text-align:center;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.18);
+  border-radius:4px;
+}
+
+.book-music p{
+  color:#40565d;
+  font-size:1.05rem;
+}
+
+.book-music-title{
+  margin:25px 0 5px;
+  font-size:1.5rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:#26383e;
+  font-weight:bold;
+}
+
+.book-music .btn{
+  margin-top:15px;
+}
+
+
+/* =========================
+   ANCORA FUTURA ESTRATTI
+   ========================= */
+
+.future-anchor{
+  display:block;
+  height:0;
+  margin:0;
+  padding:0;
+  visibility:hidden;
+}
+
+
+/* =========================
+   ACQUISTA IL LIBRO
+   ========================= */
+
+.book-buy{
+  max-width:700px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.book-buy h3{
+  margin-bottom:10px;
+}
+
+.book-buy p{
+  color:#40565d;
+  margin:0 0 25px;
+}
+
+.book-buy-btn{
+  margin-top:5px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:800px){
+
+  .book-cards{
+    grid-template-columns:1fr;
+    max-width:520px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .book-card{
+    min-height:220px;
+  }
+
+  .book-block{
+    margin-bottom:55px;
+  }
+
+  .book-music{
+    padding:38px 22px;
+  }
+
+}
+
 @media(max-width:600px){
 
   .hero{
@@ -262,4 +482,36 @@ section + section{
   audio{
     width:100%;
   }
+
+  .book-section{
+    padding-top:65px;
+    padding-bottom:70px;
+  }
+
+  .book-section h2{
+    font-size:2.2rem;
+  }
+
+  .book-subtitle{
+    font-size:1.05rem;
+  }
+
+  .book-intro{
+    font-size:1.05rem;
+    margin-bottom:50px;
+  }
+
+  .book-block p{
+    font-size:1rem;
+  }
+
+  .book-quote{
+    font-size:1.15rem;
+    padding:24px 20px;
+  }
+
+  .book-music{
+    padding:32px 18px;
+  }
+
 }
