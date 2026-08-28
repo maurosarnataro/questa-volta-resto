@@ -3,22 +3,25 @@
    Mauro
    ========================================================= */
 
+
 /* ---------- ROOT ---------- */
 
 :root {
-  --bg: #111214;
-  --bg-soft: #17191c;
-  --bg-card: #1d2024;
+  --bg: #eee8dc;
+  --bg-soft: #e8e0d3;
+  --bg-card: #f7f3eb;
 
-  --text: #f1f0ec;
-  --text-soft: #c8c7c2;
-  --muted: #929399;
+  --text: #403936;
+  --text-soft: #625b56;
+  --muted: #817872;
 
-  --line: rgba(255, 255, 255, 0.12);
-  --line-strong: rgba(255, 255, 255, 0.22);
+  --line: rgba(74, 61, 55, 0.16);
+  --line-strong: rgba(74, 61, 55, 0.28);
 
-  --accent: #d8c6a0;
-  --accent-soft: rgba(216, 198, 160, 0.14);
+  --accent: #8a5a55;
+  --accent-soft: rgba(138, 90, 85, 0.10);
+
+  --gold: #b08a52;
 
   --white: #ffffff;
 
@@ -105,7 +108,7 @@ p {
   background:
     radial-gradient(
       circle at center top,
-      rgba(216, 198, 160, 0.08),
+      rgba(176, 138, 82, 0.10),
       transparent 48%
     ),
     var(--bg);
@@ -131,8 +134,8 @@ p {
   border-radius: 3px;
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(255, 255, 255, 0.08);
+    0 30px 70px rgba(55, 43, 38, 0.22),
+    0 0 0 1px rgba(74, 61, 55, 0.12);
 }
 
 
@@ -141,7 +144,7 @@ p {
 .eyebrow {
   margin-bottom: 22px;
 
-  color: var(--accent);
+  color: var(--gold);
 
   font-size: 13px;
   font-weight: 600;
@@ -156,7 +159,7 @@ p {
 .hero h1 {
   margin: 0 0 22px;
 
-  color: var(--text);
+  color: var(--accent);
 
   font-size: clamp(44px, 7vw, 78px);
   font-weight: 500;
@@ -203,9 +206,9 @@ p {
 
   padding: 30px 35px;
 
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--gold);
 
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.42);
 
   color: var(--text);
 
@@ -264,7 +267,7 @@ p {
 }
 
 .track:hover {
-  background: rgba(216, 198, 160, 0.045);
+  background: rgba(138, 90, 85, 0.06);
 
   padding-left: 25px;
   padding-right: 25px;
@@ -405,7 +408,7 @@ audio {
 .book-block h3 {
   margin-bottom: 28px;
 
-  color: var(--text);
+  color: var(--accent);
 
   font-size: 27px;
   font-weight: 500;
@@ -421,7 +424,7 @@ audio {
 
   padding: 25px 30px;
 
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--gold);
 
   background: var(--accent-soft);
 
@@ -465,19 +468,26 @@ audio {
 
   border: 1px solid var(--line);
 
+  box-shadow:
+    0 8px 25px rgba(60, 48, 42, 0.05);
+
   transition:
     transform 0.25s ease,
     border-color 0.25s ease,
-    background 0.25s ease;
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 
 .book-card:hover {
   transform: translateY(-4px);
 
-  background: #22262b;
+  background: #fbf8f2;
 
-  border-color: var(--line-strong);
+  border-color: rgba(138, 90, 85, 0.35);
+
+  box-shadow:
+    0 14px 35px rgba(60, 48, 42, 0.09);
 }
 
 
@@ -486,7 +496,7 @@ audio {
 .book-card h4 {
   margin: 0 0 16px;
 
-  color: var(--text);
+  color: var(--accent);
 
   font-size: 20px;
   font-weight: 500;
@@ -500,7 +510,7 @@ audio {
 .book-card p {
   margin: 0;
 
-  color: var(--muted);
+  color: var(--text-soft);
 
   font-size: 15px;
 
@@ -521,11 +531,11 @@ audio {
 
   padding: 11px 19px;
 
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--accent);
 
   background: transparent;
 
-  color: var(--text);
+  color: var(--accent);
 
   text-decoration: none;
 
@@ -547,7 +557,7 @@ audio {
 
   border-color: var(--accent);
 
-  color: #111214;
+  color: #ffffff;
 }
 
 
@@ -560,7 +570,7 @@ audio {
 
   border-color: var(--accent);
 
-  color: #111214;
+  color: #ffffff;
 }
 
 .btn.primary:hover {
@@ -582,8 +592,8 @@ audio {
   background:
     linear-gradient(
       135deg,
-      rgba(216, 198, 160, 0.08),
-      rgba(255, 255, 255, 0.015)
+      rgba(138, 90, 85, 0.08),
+      rgba(176, 138, 82, 0.05)
     );
 
   border: 1px solid var(--line);
@@ -595,7 +605,7 @@ audio {
 .book-music h3 {
   margin-bottom: 22px;
 
-  color: var(--text);
+  color: var(--accent);
 
   font-size: 30px;
 
@@ -639,7 +649,7 @@ audio {
 .book-buy h3 {
   margin-bottom: 12px;
 
-  color: var(--text);
+  color: var(--accent);
 
   font-size: 32px;
 
@@ -650,7 +660,7 @@ audio {
 .book-buy p {
   margin-bottom: 30px;
 
-  color: var(--muted);
+  color: var(--text-soft);
 }
 
 
@@ -683,11 +693,11 @@ audio {
 footer {
   padding: 45px 0;
 
-  background: #0c0d0f;
+  background: #ded5c7;
 
   border-top: 1px solid var(--line);
 
-  color: var(--muted);
+  color: var(--text-soft);
 
   text-align: center;
 }
@@ -705,7 +715,7 @@ footer .wrap {
 
 
 footer .small {
-  color: #66686d;
+  color: var(--muted);
 
   font-size: 12px;
 
@@ -889,7 +899,7 @@ footer .small {
 a:focus-visible,
 button:focus-visible,
 audio:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--gold);
 
   outline-offset: 4px;
 }
