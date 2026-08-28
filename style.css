@@ -1,35 +1,26 @@
-/* =========================================================
-   QUESTA VOLTA RESTO — STYLE.CSS
-   Mauro
-   ========================================================= */
-
-
-/* ---------- ROOT ---------- */
-
 :root {
-  --bg: #087F5B;
-  --bg-soft: #0A936B;
-  --bg-card: #0C8A64;
+  --bg: #e8f4ef;
+  --bg-soft: #d8eee6;
+  --bg-card: #f5fbf8;
 
-  --text: #ffffff;
-  --text-soft: #E4F7EF;
-  --muted: #B9E3D3;
+  --text: #123c35;
+  --text-soft: #315c54;
+  --muted: #5d8179;
 
-  --line: rgba(255, 255, 255, 0.18);
-  --line-strong: rgba(255, 255, 255, 0.30);
+  --line: rgba(18, 60, 53, 0.16);
+  --line-strong: rgba(18, 60, 53, 0.28);
 
-  --accent: #ffffff;
-  --accent-soft: rgba(255, 255, 255, 0.10);
+  --accent: #087f63;
+  --accent-soft: rgba(8, 127, 99, 0.10);
 
-  --gold: #8FE3C2;
-
+  --gold: #b99a55;
   --white: #ffffff;
+
+  --green-main: #0d8f70;
+  --green-dark: #075846;
 
   --max-width: 1040px;
 }
-
-
-/* ---------- RESET ---------- */
 
 * {
   box-sizing: border-box;
@@ -43,17 +34,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.7;
 }
-
-
-/* ---------- GENERAL ---------- */
 
 .wrap {
   width: min(var(--max-width), calc(100% - 48px));
@@ -61,7 +44,7 @@ body {
 }
 
 section {
-  padding: 110px 0;
+  padding: 100px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -74,14 +57,11 @@ p {
 }
 
 h2 {
-  margin-bottom: 55px;
-
+  margin-bottom: 50px;
   font-size: clamp(30px, 4vw, 48px);
   font-weight: 500;
-
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   line-height: 1.1;
-
   text-align: center;
 }
 
@@ -89,29 +69,32 @@ p {
   color: var(--text-soft);
 }
 
-
-/* =========================================================
+/* =========================
    HERO
-   ========================================================= */
+   ========================= */
 
 .hero {
   min-height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-
-  padding: 90px 0 110px;
+  padding: 70px 0 100px;
 
   background:
     radial-gradient(
       circle at center top,
-      rgba(143, 227, 194, 0.14),
+      rgba(255,255,255,0.28),
       transparent 48%
     ),
-    var(--bg);
+    linear-gradient(
+      135deg,
+      #087f63 0%,
+      #119878 52%,
+      #55b99d 100%
+    );
+
+  color: white;
 }
 
 .hero .wrap {
@@ -120,281 +103,202 @@ p {
   align-items: center;
 }
 
-
-/* ---------- COVER ---------- */
-
 .cover {
   display: block;
-
-  width: min(380px, 72vw);
+  width: min(420px, 72vw);
   height: auto;
-
-  margin: 0 auto 55px;
-
-  border-radius: 3px;
+  margin: 0 auto 45px;
+  border-radius: 5px;
 
   box-shadow:
-    0 30px 70px rgba(0, 45, 32, 0.30),
-    0 0 0 1px rgba(255, 255, 255, 0.12);
+    0 30px 70px rgba(0, 40, 32, 0.30),
+    0 0 0 1px rgba(255,255,255,0.12);
 }
 
-
-/* ---------- EYEBROW ---------- */
-
 .eyebrow {
-  margin-bottom: 22px;
-
-  color: var(--gold);
-
+  margin-bottom: 18px;
+  color: #d7fff3;
   font-size: 13px;
   font-weight: 600;
-
-  letter-spacing: 0.28em;
+  letter-spacing: 0.30em;
   text-transform: uppercase;
 }
 
-
-/* ---------- HERO TITLE ---------- */
-
 .hero h1 {
-  margin: 0 0 22px;
-
-  color: var(--accent);
-
+  margin: 0 0 18px;
+  color: #ffffff;
   font-size: clamp(44px, 7vw, 78px);
   font-weight: 500;
-
-  letter-spacing: 0.035em;
+  letter-spacing: 0.025em;
   line-height: 1.02;
 }
 
-
-/* ---------- SUBTITLE ---------- */
-
 .subtitle {
-  margin: 0 auto 32px;
-
-  color: var(--accent);
-
+  margin: 0 auto 28px;
+  color: #e4fff7;
   font-size: clamp(20px, 3vw, 28px);
-
   font-style: italic;
   line-height: 1.4;
 }
 
-
-/* ---------- INTRO ---------- */
-
 .intro {
   max-width: 720px;
-
-  margin: 0 auto 45px;
-
-  color: var(--text-soft);
-
+  margin: 0 auto 35px;
+  color: rgba(255,255,255,0.90);
   font-size: 18px;
   line-height: 1.8;
 }
 
-
-/* ---------- HERO QUOTE ---------- */
-
 .quote {
   max-width: 720px;
-
   margin: 0 auto;
-
-  padding: 30px 35px;
-
-  border-left: 2px solid var(--gold);
-
-  background: rgba(255, 255, 255, 0.10);
-
-  color: var(--text);
-
-  font-size: 24px;
+  padding: 28px 35px;
+  border-left: 2px solid #d5bd79;
+  background: rgba(0,0,0,0.10);
+  color: white;
+  font-size: 23px;
   font-style: italic;
-
-  line-height: 1.65;
-
+  line-height: 1.6;
   text-align: center;
 }
 
 .quote strong {
-  color: var(--accent);
-
+  color: #f1d98c;
   font-weight: 500;
 }
 
-
-/* =========================================================
+/* =========================
    ALBUM
-   ========================================================= */
+   ========================= */
 
 #album {
-  background: var(--bg-soft);
+  background: #e8f4ef;
 }
-
-
-/* ---------- TRACKLIST ---------- */
 
 .tracklist {
   max-width: 900px;
-
   margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 35px;
 
   border-top: 1px solid var(--line);
 }
 
-
-/* ---------- TRACK ---------- */
-
 .track {
   display: grid;
-
-  grid-template-columns: 70px 1fr auto;
+  grid-template-columns: 55px 1fr auto;
   align-items: center;
 
-  min-height: 78px;
-
-  padding: 0 18px;
+  min-height: 72px;
+  padding: 0 10px;
 
   border-bottom: 1px solid var(--line);
 
   transition:
     background 0.25s ease,
-    padding 0.25s ease;
+    transform 0.25s ease;
 }
 
 .track:hover {
-  background: rgba(255, 255, 255, 0.08);
-
-  padding-left: 25px;
-  padding-right: 25px;
+  background: rgba(8,127,99,0.06);
+  transform: translateX(4px);
 }
 
-
-/* ---------- NUMBER ---------- */
-
 .track .num {
-  color: var(--muted);
-
+  color: var(--accent);
   font-size: 13px;
-
   letter-spacing: 0.12em;
 }
 
-
-/* ---------- TITLE ---------- */
-
 .track .title {
   color: var(--text);
-
-  font-size: 17px;
-
-  letter-spacing: 0.03em;
+  font-size: 16px;
+  letter-spacing: 0.02em;
 }
 
-
-/* ---------- STATUS ---------- */
-
 .track .status {
-  color: var(--gold);
-
-  font-size: 11px;
+  color: var(--accent);
+  font-size: 10px;
   font-weight: 600;
-
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-
-/* =========================================================
-   AUDIO PLAYER
-   ========================================================= */
-
 audio {
   width: 100%;
-
   max-width: 680px;
-
   margin-top: 12px;
 }
 
+/* =========================
+   ASCOLTA
+   ========================= */
 
-/* =========================================================
-   NOTES / TEXT SECTIONS
-   ========================================================= */
+#ascolta {
+  background: #f5fbf8;
+}
 
 .note {
   max-width: 760px;
-
-  margin: 0 auto 25px;
-
+  margin: 0 auto 30px;
   color: var(--text-soft);
-
   font-size: 18px;
-
-  line-height: 1.85;
-
+  line-height: 1.8;
   text-align: center;
 }
 
+.listen {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-/* =========================================================
-   BOOK SECTION
-   ========================================================= */
+.audio-track {
+  margin-bottom: 22px;
+}
+
+.audio-track strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--text);
+  font-size: 16px;
+  letter-spacing: 0.02em;
+}
+
+/* =========================
+   BOOK
+   ========================= */
 
 .book-section {
-  background: var(--bg);
+  background: #dff1ea;
 }
 
 .book-section .wrap {
   max-width: 900px;
 }
 
-
-/* ---------- BOOK SUBTITLE ---------- */
-
 .book-subtitle {
   margin: -25px auto 45px;
-
-  color: var(--gold);
-
+  color: var(--accent);
   font-size: 21px;
-
   font-style: italic;
-
   text-align: center;
 }
-
-
-/* ---------- BOOK INTRO ---------- */
 
 .book-intro {
   max-width: 760px;
-
   margin: 0 auto 80px;
-
   color: var(--text);
-
   font-size: 22px;
-
   line-height: 1.75;
-
   text-align: center;
 }
 
-
-/* ---------- BOOK BLOCK ---------- */
-
 .book-block {
   max-width: 800px;
-
   margin: 0 auto 80px;
-
   padding-bottom: 65px;
-
   border-bottom: 1px solid var(--line);
 }
 
@@ -402,332 +306,166 @@ audio {
   border-bottom: none;
 }
 
-
-/* ---------- BOOK HEADINGS ---------- */
-
 .book-block h3 {
   margin-bottom: 28px;
-
   color: var(--accent);
-
   font-size: 27px;
   font-weight: 500;
-
   letter-spacing: 0.04em;
 }
 
-
-/* ---------- BOOK QUOTE ---------- */
-
 .book-quote {
   margin: 40px 0;
-
   padding: 25px 30px;
-
   border-left: 2px solid var(--gold);
-
-  background: var(--accent-soft);
-
+  background: rgba(8,127,99,0.08);
   color: var(--accent);
-
   font-size: 24px;
-
   font-style: italic;
-
   line-height: 1.6;
-
   text-align: center;
 }
 
-
-/* =========================================================
-   BOOK CARDS
-   ========================================================= */
-
 .book-cards {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 20px;
-
   margin-top: 35px;
 }
 
-
 .book-card {
   min-height: 245px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   padding: 30px 25px;
 
-  background: var(--bg-card);
-
+  background: rgba(255,255,255,0.60);
   border: 1px solid var(--line);
 
   box-shadow:
-    0 8px 25px rgba(0, 45, 32, 0.10);
+    0 8px 25px rgba(0,60,48,0.06);
 
   transition:
     transform 0.25s ease,
-    border-color 0.25s ease,
     background 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-
 .book-card:hover {
   transform: translateY(-4px);
-
-  background: #0E9F75;
-
-  border-color: rgba(255, 255, 255, 0.35);
-
+  background: #ffffff;
   box-shadow:
-    0 14px 35px rgba(0, 45, 32, 0.16);
+    0 14px 35px rgba(0,60,48,0.10);
 }
-
-
-/* ---------- CARD TITLE ---------- */
 
 .book-card h4 {
   margin: 0 0 16px;
-
   color: var(--accent);
-
   font-size: 20px;
   font-weight: 500;
-
   letter-spacing: 0.06em;
 }
 
-
-/* ---------- CARD TEXT ---------- */
-
 .book-card p {
   margin: 0;
-
   color: var(--text-soft);
-
   font-size: 15px;
-
   line-height: 1.7;
 }
 
-
-/* =========================================================
+/* =========================
    BUTTONS
-   ========================================================= */
+   ========================= */
 
 .btn {
   display: inline-block;
-
   align-self: flex-start;
-
   margin-top: 25px;
-
   padding: 11px 19px;
 
   border: 1px solid var(--accent);
-
   background: transparent;
-
   color: var(--accent);
 
   text-decoration: none;
-
   font-size: 11px;
   font-weight: 600;
-
   letter-spacing: 0.13em;
-
   text-transform: uppercase;
 
   transition:
     background 0.25s ease,
-    border-color 0.25s ease,
     color 0.25s ease;
 }
 
 .btn:hover {
   background: var(--accent);
-
-  border-color: var(--accent);
-
-  color: #087F5B;
+  color: white;
 }
-
-
-/* ---------- PRIMARY BUTTON ---------- */
 
 .btn.primary {
   padding: 14px 28px;
-
   background: var(--accent);
-
   border-color: var(--accent);
-
-  color: #087F5B;
+  color: white;
 }
 
-.btn.primary:hover {
-  background: transparent;
-
-  color: var(--accent);
-}
-
-
-/* =========================================================
+/* =========================
    BOOK → MUSIC
-   ========================================================= */
+   ========================= */
 
 .book-music {
   margin: 90px auto 70px;
-
   padding: 60px 40px;
 
   background:
     linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.09),
-      rgba(143, 227, 194, 0.08)
+      rgba(8,127,99,0.08),
+      rgba(85,185,157,0.10)
     );
 
   border: 1px solid var(--line);
-
   text-align: center;
 }
 
-
-.book-music h3 {
-  margin-bottom: 22px;
-
-  color: var(--accent);
-
-  font-size: 30px;
-
-  font-weight: 500;
-}
-
-
-.book-music p {
-  color: var(--text-soft);
-
-  font-size: 18px;
-}
-
-
+.book-music h3,
 .book-music-title {
-  margin: 30px 0 10px;
-
   color: var(--accent);
-
-  font-size: 30px;
-
-  font-weight: 500;
-
-  letter-spacing: 0.04em;
-}
-
-
-/* =========================================================
-   BOOK PURCHASE
-   ========================================================= */
-
-.book-buy {
-  padding: 70px 30px;
-
-  border-top: 1px solid var(--line);
-
-  text-align: center;
-}
-
-
-.book-buy h3 {
-  margin-bottom: 12px;
-
-  color: var(--accent);
-
-  font-size: 32px;
-
   font-weight: 500;
 }
 
-
-.book-buy p {
-  margin-bottom: 30px;
-
-  color: var(--text-soft);
-}
-
-
-.book-buy-btn {
-  display: inline-block;
-
-  align-self: auto;
-}
-
-
-/* =========================================================
-   FUTURE ANCHORS
-   ========================================================= */
-
-.future-anchor {
-  display: block;
-
-  position: relative;
-
-  top: -100px;
-
-  visibility: hidden;
-}
-
-
-/* =========================================================
+/* =========================
    FOOTER
-   ========================================================= */
+   ========================= */
 
 footer {
   padding: 45px 0;
-
-  background: #056B4E;
-
-  border-top: 1px solid var(--line);
-
-  color: var(--text-soft);
-
+  background: #075846;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.80);
   text-align: center;
 }
 
-
 footer .wrap {
   display: flex;
-
   flex-direction: column;
-
   gap: 8px;
-
   align-items: center;
 }
 
-
 footer .small {
-  color: var(--muted);
-
+  color: rgba(255,255,255,0.65);
   font-size: 12px;
-
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
 }
 
-
-/* =========================================================
-   RESPONSIVE — TABLET
-   ========================================================= */
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (max-width: 850px) {
 
@@ -739,20 +477,14 @@ footer .small {
     grid-template-columns: 1fr;
   }
 
-  .book-card {
-    min-height: auto;
+  .tracklist {
+    grid-template-columns: 1fr;
   }
 
   .track {
     grid-template-columns: 55px 1fr auto;
   }
-
 }
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -764,25 +496,18 @@ footer .small {
     padding: 70px 0;
   }
 
-
-  /* HERO */
-
   .hero {
     min-height: auto;
-
-    padding: 65px 0 80px;
+    padding: 55px 0 75px;
   }
 
   .cover {
     width: min(310px, 78vw);
-
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   .hero h1 {
     font-size: clamp(38px, 11vw, 58px);
-
-    letter-spacing: 0.02em;
   }
 
   .subtitle {
@@ -795,29 +520,17 @@ footer .small {
 
   .quote {
     padding: 24px 20px;
-
     font-size: 20px;
   }
 
-
-  /* SECTION TITLES */
-
   h2 {
     margin-bottom: 40px;
-
     font-size: 30px;
-
-    letter-spacing: 0.06em;
   }
 
-
-  /* TRACKLIST */
-
   .track {
-    grid-template-columns: 42px 1fr;
-
+    grid-template-columns: 42px 1fr auto;
     min-height: 72px;
-
     padding: 14px 5px;
   }
 
@@ -829,18 +542,13 @@ footer .small {
     display: none;
   }
 
-
-  /* BOOK */
-
   .book-intro {
     margin-bottom: 60px;
-
     font-size: 19px;
   }
 
   .book-block {
     margin-bottom: 60px;
-
     padding-bottom: 50px;
   }
 
@@ -850,12 +558,8 @@ footer .small {
 
   .book-quote {
     padding: 22px 18px;
-
     font-size: 20px;
   }
-
-
-  /* CARDS */
 
   .book-cards {
     gap: 15px;
@@ -865,52 +569,19 @@ footer .small {
     padding: 25px 22px;
   }
 
-
-  /* MUSIC */
-
-  .book-music {
-    margin: 65px auto 50px;
-
-    padding: 45px 22px;
-  }
-
-  .book-music h3 {
-    font-size: 25px;
-  }
-
-  .book-music-title {
-    font-size: 25px;
-  }
-
-
-  /* FOOTER */
-
   footer {
     padding: 35px 0;
   }
-
 }
-
-
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
 
 a:focus-visible,
 button:focus-visible,
 audio:focus-visible {
   outline: 2px solid var(--gold);
-
   outline-offset: 4px;
 }
 
-
-/* =========================================================
-   REDUCE MOTION
-   ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
   html {
     scroll-behavior: auto;
   }
@@ -920,5 +591,4 @@ audio:focus-visible {
   *::after {
     transition: none !important;
   }
-
 }
