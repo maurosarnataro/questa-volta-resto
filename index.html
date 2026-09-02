@@ -643,6 +643,64 @@
   </div>
 
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const params = new URLSearchParams(window.location.search);
+  const brano = params.get("brano");
+  const album = params.get("album");
+
+  const tracks = {
+    "ultimo-banco": 0,
+    "la-ballerina": 1,
+    "mi-guardavano-tutti": 2,
+    "il-vuoto-ha-il-tuo-nome": 3,
+    "ritorno-nel-buio": 4,
+    "mamma-ho-paura": 5,
+    "roma-di-notte": 6,
+    "la-gabbia": 7,
+    "mamma-ti-amo": 8,
+    "non-puo-finire-cosi": 9
+  };
+
+  const ascolta = document.getElementById("ascolta");
+  const audioTracks = document.querySelectorAll("#ascolta .audio-track");
+
+  if (album === "questa-volta-resto") {
+    if (ascolta) {
+      setTimeout(function () {
+        ascolta.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 300);
+    }
+    return;
+  }
+
+  if (brano && tracks.hasOwnProperty(brano)) {
+
+    const track = audioTracks[tracks[brano]];
+
+    if (track) {
+
+      track.style.outline = "2px solid #c9a227";
+      track.style.borderRadius = "8px";
+      track.style.padding = "10px";
+      track.style.transition = "all 0.3s ease";
+
+      setTimeout(function () {
+        track.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 300);
+
+    }
+  }
+
+});
+</script>
 
 </body>
 </html>
