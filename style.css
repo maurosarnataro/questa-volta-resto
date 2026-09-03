@@ -486,13 +486,7 @@ footer .small {
   }
 }
 
-.cover {
-  width: min(310px, 78vw);
-  margin-bottom: 38px;
-}
-.story-image {
-  width: min(94vw, 520px);
-}
+@media (max-width: 600px) {
   .wrap {
     width: min(100% - 34px, var(--max-width));
   }
@@ -510,7 +504,9 @@ footer .small {
     width: min(310px, 78vw);
     margin-bottom: 38px;
   }
-
+.story-image {
+  width: min(94vw, 520px);
+}
   .hero h1 {
     font-size: clamp(38px, 11vw, 58px);
   }
