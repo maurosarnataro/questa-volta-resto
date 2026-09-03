@@ -486,8 +486,13 @@ footer .small {
   }
 }
 
-@media (max-width: 600px) {
-
+.cover {
+  width: min(310px, 78vw);
+  margin-bottom: 38px;
+}
+.story-image {
+  width: min(94vw, 520px);
+}
   .wrap {
     width: min(100% - 34px, var(--max-width));
   }
@@ -614,10 +619,10 @@ audio:focus-visible {
   color: #ffffff;
 }
 
-/* Immagine del tunnel */
-.tunnel-image {
+/* Immagine uomo + bambino */
+.story-image {
   display: block;
-  width: min(520px, 82vw);
+  width: min(760px, 92vw);
   height: auto;
   margin: 0 auto 48px;
   border-radius: 6px;
